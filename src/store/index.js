@@ -1,9 +1,11 @@
 import { createStore } from "redux";
 
-const reducerFn = (state = { counter: 10 }, action) => {
 
-    // synchronous  function
-    //we should not mutate the original state
+const initialState = {
+    counter: 0
+}
+
+const reducerFn = (state = initialState, action) => {
 
     if (action.type === "INC") {
         return { counter: state.counter + 1 }
